@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mau Jadi Pacarku?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d6336c;
+    }
+
+    #buttons {
+      margin-top: 50px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+      color: #333;
+      position: absolute;
+    }
+
+    #response {
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #28a745;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>alinkaaa, mau ga jadi pacar aku?</h1>
+
+  <div id="buttons">
+    <button id="yesBtn">yaudah deh</button>
+    <button id="noBtn">gamauu</button>
+  </div>
+
+  <div id="response">YEYYY I LOVE YOU</div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const response = document.getElementById('response');
+
+    yesBtn.onclick = () => {
+      response.style.display = 'block';
+      document.getElementById('buttons').style.display = 'none';
+    };
+
+    noBtn.onmouseover = () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    };
+  </script>
+
+</body>
+</html>
